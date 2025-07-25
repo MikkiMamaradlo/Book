@@ -4,7 +4,7 @@ import 'models/book.dart';
 class AddBookPage extends StatefulWidget {
   final Book? initialBook;
 
-  AddBookPage({this.initialBook});
+  const AddBookPage({super.key, this.initialBook});
 
   @override
   _AddBookPageState createState() => _AddBookPageState();
@@ -15,18 +15,18 @@ class _AddBookPageState extends State<AddBookPage> {
   final _titleController = TextEditingController();
   final _authorController = TextEditingController();
   final _yearController = TextEditingController();
-  String _selectedImage = 'assets/libro.jpg';
+  String _selectedImage = 'assets/book.png';
   bool _isEditing = false;
 
   final List<String> _availableImages = [
-    'assets/libro.jpg',
-    'assets/demon.jpg',
-    'assets/demon1.jpg',
-    'assets/demon2.jpg',
-    'assets/demon3.jpg',
-    'assets/demon4.jpg',
-    'assets/demon5.jpg',
-    'assets/demon6.jpg',
+    'assets/book.png',
+    'assets/book1.jpg',
+    'assets/book2.jpg',
+    'assets/book3.jpg',
+    'assets/book4.jpg',
+    'assets/book5.jpg',
+    'assets/book6.jpg',
+    'assets/book7.jpg',
   ];
 
   @override
@@ -56,8 +56,8 @@ class _AddBookPageState extends State<AddBookPage> {
       final book = Book(
         title: _titleController.text.trim(),
         author: _authorController.text.trim(),
-        publishedYear: _yearController.text.isNotEmpty 
-            ? int.tryParse(_yearController.text.trim()) 
+        publishedYear: _yearController.text.isNotEmpty
+            ? int.tryParse(_yearController.text.trim())
             : null,
         image: _selectedImage,
       );
@@ -77,7 +77,7 @@ class _AddBookPageState extends State<AddBookPage> {
       body: Container(
         decoration: BoxDecoration(
           image: DecorationImage(
-            image: AssetImage('assets/bg.jpg'),
+            image: AssetImage('assets/bg1.jpg'),
             fit: BoxFit.cover,
             colorFilter: ColorFilter.mode(
               Colors.black.withOpacity(0.3),
@@ -121,9 +121,9 @@ class _AddBookPageState extends State<AddBookPage> {
                     ),
                   ),
                   SizedBox(height: 16),
-                  
+
                   // Image Selection Buttons
-                  Container(
+                  SizedBox(
                     height: 60,
                     child: ListView.builder(
                       scrollDirection: Axis.horizontal,
@@ -143,18 +143,15 @@ class _AddBookPageState extends State<AddBookPage> {
                             decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(8),
                               border: Border.all(
-                                color: _selectedImage == image 
-                                    ? Colors.white 
+                                color: _selectedImage == image
+                                    ? Colors.white
                                     : Colors.transparent,
                                 width: 2,
                               ),
                             ),
                             child: ClipRRect(
                               borderRadius: BorderRadius.circular(6),
-                              child: Image.asset(
-                                image,
-                                fit: BoxFit.cover,
-                              ),
+                              child: Image.asset(image, fit: BoxFit.cover),
                             ),
                           ),
                         );
@@ -264,7 +261,10 @@ class _AddBookPageState extends State<AddBookPage> {
                     ),
                     child: Text(
                       _isEditing ? 'Update Book' : 'Add Book',
-                      style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                      style: TextStyle(
+                        fontSize: 18,
+                        fontWeight: FontWeight.bold,
+                      ),
                     ),
                   ),
                 ],

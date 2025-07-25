@@ -48,7 +48,7 @@ const bookSchema = new mongoose.Schema({
   },
   image: {
     type: String,
-    default: 'assets/libro.jpg'
+    default: 'assets/book.png'
   },
   createdAt: {
     type: Date,
@@ -187,7 +187,7 @@ app.post('/api/books', async (req, res) => {
       title,
       author,
       publishedYear: publishedYear || null,
-      image: image || 'assets/libro.jpg'
+      image: image || 'assets/book.png'
     });
 
     const savedBook = await book.save();

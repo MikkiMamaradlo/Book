@@ -10,37 +10,37 @@ const sampleBooks = [
     title: 'Kuko Ng Agila',
     author: 'Harper Lee',
     publishedYear: 1960,
-    image: 'assets/demon1.jpg'
+    image: 'assets/book1.jpg'
   },
   {
     title: 'Deathly Hallows',
     author: 'George Orwell',
     publishedYear: 1949,
-    image: 'assets/demon2.jpg'
+    image: 'assets/book2.jpg'
   },
   {
     title: 'Order of the Phoenix',
     author: 'F. Scott Fitzgerald',
     publishedYear: 1925,
-    image: 'assets/demon3.jpg'
+    image: 'assets/book3.jpg'
   },
   {
     title: 'The Sorcerers Stone',
     author: 'Jane Austen',
     publishedYear: 1813,
-    image: 'assets/demon4.jpg'
+    image: 'assets/book4.jpg'
   },
   {
     title: 'The Great Gatsby',
     author: 'F. Scott Fitzgerald',
     publishedYear: 1925,
-    image: 'assets/demon5.jpg'
+    image: 'assets/book5.jpg'
   },
   {
     title: 'Pride and Prejudice',
     author: 'Jane Austen',
     publishedYear: 1813,
-    image: 'assets/demon6.jpg'
+    image: 'assets/book7.jpg'
   }
 ];
 
@@ -65,7 +65,7 @@ const bookSchema = new mongoose.Schema({
   },
   image: {
     type: String,
-    default: 'assets/libro.jpg'
+    default: 'assets/book.png'
   },
   createdAt: {
     type: Date,

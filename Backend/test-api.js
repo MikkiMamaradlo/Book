@@ -7,7 +7,7 @@ const testBook = {
   title: 'Test Book',
   author: 'Test Author',
   publishedYear: 2023,
-  image: 'assets/libro.jpg'
+  image: 'assets/book.png'
 };
 
 let createdBookId = null;

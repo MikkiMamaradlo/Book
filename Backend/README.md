@@ -185,7 +185,7 @@ GET /api/stats
 |----------|-------------|---------|
 | `PORT` | Server port | 3000 |
 | `NODE_ENV` | Environment mode | development |
-| `MONGODB_URI` | MongoDB connection string | mongodb://localhost:27017/booklibrary |
+| `MONGODB_URI` | MongoDB connection string |   |
 
 ### MongoDB Setup
 
