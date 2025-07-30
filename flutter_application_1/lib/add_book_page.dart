@@ -71,7 +71,7 @@ class _AddBookPageState extends State<AddBookPage> {
     return Scaffold(
       appBar: AppBar(
         title: Text(_isEditing ? 'Edit Book' : 'Add New Book'),
-        backgroundColor: Color(0xFF8B4513),
+        backgroundColor: Color.fromARGB(255, 5, 5, 5),
         foregroundColor: Colors.white,
       ),
       body: Container(
@@ -252,7 +252,7 @@ class _AddBookPageState extends State<AddBookPage> {
                   ElevatedButton(
                     onPressed: _saveBook,
                     style: ElevatedButton.styleFrom(
-                      backgroundColor: Color(0xFF8B4513),
+                      backgroundColor: Color.fromARGB(255, 5, 5, 5),
                       foregroundColor: Colors.white,
                       padding: EdgeInsets.symmetric(vertical: 16),
                       shape: RoundedRectangleBorder(

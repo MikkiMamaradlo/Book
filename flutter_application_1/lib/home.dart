@@ -169,8 +169,8 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       appBar: AppBar(
         title: Text('Book Library'),
-        backgroundColor: Color(0xFF8B4513),
-        foregroundColor: Colors.white,
+        backgroundColor: Color.fromARGB(255, 5, 5, 5),
+        foregroundColor: const Color.fromARGB(255, 248, 227, 2),
         actions: [IconButton(icon: Icon(Icons.refresh), onPressed: _loadBooks)],
       ),
       body: _buildBody(),
@@ -184,8 +184,8 @@ class _HomePageState extends State<HomePage> {
             await _addBook(result);
           }
         },
-        backgroundColor: Color(0xFF8B4513),
-        child: Icon(Icons.add, color: Colors.white),
+        backgroundColor: Color.fromARGB(255, 5, 5, 5),
+        child: Icon(Icons.add, color: const Color.fromARGB(255, 255, 251, 16)),
       ),
     );
   }
@@ -226,7 +226,7 @@ class _HomePageState extends State<HomePage> {
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      CircularProgressIndicator(color: Color(0xFF8B4513)),
+                      CircularProgressIndicator(color: Color.fromARGB(255, 5, 5, 5)),
                       SizedBox(height: 16),
                       Text('Loading books...'),
                     ],
@@ -248,8 +248,8 @@ class _HomePageState extends State<HomePage> {
                       ElevatedButton(
                         onPressed: _loadBooks,
                         style: ElevatedButton.styleFrom(
-                          backgroundColor: Color(0xFF8B4513),
-                          foregroundColor: Colors.white,
+                          backgroundColor: Color.fromARGB(255, 5, 5, 5),
+                          foregroundColor: const Color.fromARGB(255, 255, 251, 16),
                         ),
                         child: Text('Retry'),
                       ),
@@ -309,7 +309,7 @@ class _HomePageState extends State<HomePage> {
                                       ),
                                     ],
                                     border: Border.all(
-                                      color: Color(0xFF8B4513),
+                                      color: Color.fromARGB(255, 5, 5, 5),
                                       width: 2,
                                     ),
                                     image: DecorationImage(
@@ -348,7 +348,7 @@ class _HomePageState extends State<HomePage> {
                                           ),
                                           backgroundColor: Colors.brown[50],
                                           labelStyle: TextStyle(
-                                            color: Color(0xFF8B4513),
+                                            color: Color.fromARGB(255, 5, 5, 5),
                                           ),
                                         ),
                                       ],

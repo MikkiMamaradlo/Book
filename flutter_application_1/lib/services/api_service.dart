@@ -3,7 +3,7 @@ import 'package:http/http.dart' as http;
 import '../models/book.dart';
 
 class ApiService {
-  static const String baseUrl = 'http://192.168.194.182:3000/api';
+  static const String baseUrl = 'http://localhost:3000/api';
   
   // Get all books
   static Future<List<Book>> getBooks() async {
